@@ -48,6 +48,49 @@
 					"response": []
 				},
 				{
+					"name": "Validate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-API-KEY",
+								"value": "3mtlHiQ5CA5croypDN1NRiJYROkF43NZ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/key/validate",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"key",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Revoke",
 					"request": {
 						"method": "DELETE",
