@@ -34,7 +34,7 @@ class KeyManagerProvider extends ServiceProvider
         ], 'config');
 
         // Registrar el middleware en el Kernel de la aplicación
-        $this->app['router']->aliasMiddleware('key.access', ValidateKeyMiddleware::class);
+        $this->app['router']->aliasMiddleware('key.api', ValidateKeyMiddleware::class);
 
         // Cargar rutas de api.php
         $this->loadRoutesFrom(__DIR__.'/../Routes/api.php');

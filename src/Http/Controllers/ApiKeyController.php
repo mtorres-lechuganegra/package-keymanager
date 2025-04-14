@@ -1,6 +1,6 @@
 <?php
 
-namespace LechugaNegra\AccessManager\Http\Controllers;
+namespace LechugaNegra\KeyManager\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use LechugaNegra\KeyManager\Http\Requests\GenerateApiKeyRequest;

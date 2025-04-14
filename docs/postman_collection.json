@@ -7,193 +7,84 @@
 	},
 	"item": [
 		{
-			"name": "Access Manager",
+			"name": "Key Manager",
 			"item": [
 				{
-					"name": "Capability Role",
-					"item": [
-						{
-							"name": "Store",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"code\": \"rol_admin\",\r\n  \"name\": \"Administrador\",\r\n  \"status\": \"active\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}api/access/capability/roles",
-									"host": [
-										"{{url}}api"
-									],
-									"path": [
-										"access",
-										"capability",
-										"roles"
-									]
-								}
+					"name": "Generate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							},
-							"response": []
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"name\": \"Site Name\",\r\n    \"referer_url\": \"http://tudominio.com\",\r\n    \"expires_at\": \"2025-05-01\",\r\n    \"status\": \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						{
-							"name": "Update",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Administrador\",\r\n  \"status\": \"inactive\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}api/access/capability/roles/1",
-									"host": [
-										"{{url}}api"
-									],
-									"path": [
-										"access",
-										"capability",
-										"roles",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Show",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}api/access/capability/roles/1",
-									"host": [
-										"{{url}}api"
-									],
-									"path": [
-										"access",
-										"capability",
-										"roles",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Index",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}api/access/capability/roles?page=1&size=10",
-									"host": [
-										"{{url}}api"
-									],
-									"path": [
-										"access",
-										"capability",
-										"roles"
-									],
-									"query": [
-										{
-											"key": "page",
-											"value": "1"
-										},
-										{
-											"key": "size",
-											"value": "10"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Destroy",
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}api/access/capability/roles/1",
-									"host": [
-										"{{url}}api"
-									],
-									"path": [
-										"access",
-										"capability",
-										"roles",
-										"1"
-									]
-								}
-							},
-							"response": []
+						"url": {
+							"raw": "{{url}}api/key/generate",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"key",
+								"generate"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/key/revoke/{key}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"key",
+								"revoke",
+								"{key}"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
@@ -223,7 +114,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "http://lechuganegra.test/",
+			"value": "http://ln-packages.test/",
 			"type": "string"
 		},
 		{
