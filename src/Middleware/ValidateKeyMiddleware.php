@@ -19,7 +19,7 @@ class ValidateKeyMiddleware
     public function handle(Request $request, Closure $next)
     {
         // Obtener API Key del header
-        $apiKey = $request->header('X-API-KEY');
+        $apiKey = trim($request->header('X-API-KEY'));
 
         if (!$apiKey) {
             return response()->json(['error' => 'API Key is required'], Response::HTTP_UNAUTHORIZED);

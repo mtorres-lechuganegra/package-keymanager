@@ -6,6 +6,7 @@ Este paquete de Laravel permite generar y validar llaves de acceso externas (API
 
 * **Gestión de Keys:** Gestiona las llaves por entidad, facilitando la generación de token únicos para la validación de middlewares.
 * **Middleware de Validación:** Valida las llaves generadas (token) para permitir el acceso a las rutas que están dentro de la capa de middlware de `api.key`.
+* **Endpoint de validación de llave:** Endpoint para validar la clave API, su objetivo es para uso de microservicio.
 
 ## Instalación
 

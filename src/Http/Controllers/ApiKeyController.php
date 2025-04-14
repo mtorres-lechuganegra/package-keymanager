@@ -16,7 +16,7 @@ class ApiKeyController extends Controller
     }
 
     /**
-     * Genera una nueva clave API para el usuario.
+     * Genera una nueva clave API.
      *
      * @param GenerateApiKeyRequest $request
      * @return \Illuminate\Http\JsonResponse
@@ -39,7 +39,18 @@ class ApiKeyController extends Controller
     }
 
     /**
-     * Revoca la clave API del usuario.
+     * Valida la clave API.
+     *
+     * @param $key
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function validate()
+    {
+        return response()->json(['validate' => true], 404);
+    }
+
+    /**
+     * Revoca la clave API.
      *
      * @param $key
      * @return \Illuminate\Http\JsonResponse
