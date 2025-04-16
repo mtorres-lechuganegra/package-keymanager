@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use LechugaNegra\KeyManager\Http\Controllers\ApiKeyController;
 
 Route::prefix('api/key')->name('api.key.')->group(function () {
-    Route::post('generate/', [ApiKeyController::class, 'generate'])->name('me'); // Crear nueva API Key
-    Route::delete('revoke/{key}', [ApiKeyController::class, 'revoke'])->name('me'); // Revocar API Key
+    Route::post('generate/', [ApiKeyController::class, 'generate'])->name('generate'); // Crear nueva API Key
+    Route::delete('revoke/{key}', [ApiKeyController::class, 'revoke'])->name('revoke'); // Revocar API Key
 });
 
 Route::middleware(['api.key'])->group(function () {
