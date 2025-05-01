@@ -11,6 +11,8 @@ return [
     */
     'default_page' => env('KEY_MANAGER_DEFAULT_PAGE', 1),
     'default_size' => env('KEY_MANAGER_DEFAULT_SIZE', 20),
+    'default_skip' => env('KEY_MANAGER_DEFAULT_SKIP', 0),
+    'default_take' => env('KEY_MANAGER_DEFAULT_TAKE', 20),
 
     /*
     |--------------------------------------------------------------------------
