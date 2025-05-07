@@ -54,7 +54,7 @@ Este paquete de Laravel permite generar y validar llaves de acceso externas (API
     {
         "autoload": {
             "psr-4": {
-                "LechugaNegra\\KeyManager\\": "packages/LechugaNegra/KeyManager/src/"
+                "LechugaNegra\\KeyManager\\": "packages/lechugaNegra/keymanager/src/"
             }
         }
     }
@@ -109,6 +109,10 @@ Este paquete de Laravel permite generar y validar llaves de acceso externas (API
     ```
 
 ## Uso
+
+### Endpoints del Servicio
+
+Puede importar el archivo `postman_collection.json` que se ubica en la carpeta `docs` de la raíz del paquete.
 
 ### Middleware de Validación
 
