@@ -31,7 +31,7 @@ class KeyManagerProvider extends ServiceProvider
         // Cargar configuración predeterminada desde el paquete
         $this->publishes([
             __DIR__ . '/../../config/keymanager.php' => config_path('keymanager.php'),
-        ], 'config');
+        ], 'keymanager-config');
 
         // Registrar el middleware en el Kernel de la aplicación
         $this->app['router']->aliasMiddleware('api.key', ValidateKeyMiddleware::class);

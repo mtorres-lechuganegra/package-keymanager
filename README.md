@@ -70,7 +70,18 @@ Este paquete de Laravel permite generar y validar llaves de acceso externas (API
 
     Este comando descargará el paquete y actualizará tu archivo `composer.json`.
 
-5.  **Configurar el modelo de usuario (opcional):**
+5.  **Publicar archivo de configuración:**
+
+    Ejecuta el siguiente comando para copiar el archivo de configuración del paquete a la carpeta `config` del proyecto::
+
+    ```bash
+    php artisan vendor:publish --tag=keymanager-config
+    
+    ```
+    
+    Esto te permitirá personalizar el comportamiento del paquete desde tu proyecto.
+
+6.  **Configurar el modelo de usuario (opcional):**
 
     Puedes editar el archivo `config/keymanager.php` y modifica la entrada `user_entity` con la información de tu modelo:
 
@@ -81,7 +92,7 @@ Este paquete de Laravel permite generar y validar llaves de acceso externas (API
     ],
     ```
 
-5.  **Ejecutar las migraciones:**
+7.  **Ejecutar las migraciones:**
 
     Ejecuta las migraciones del paquete para crear las tablas necesarias en la base de datos:
 
@@ -89,7 +100,7 @@ Este paquete de Laravel permite generar y validar llaves de acceso externas (API
     php artisan migrate --path=packages/lechuganegra/keymanager/src/Database/Migrations
     ```
 
-6.  **Limpiar la caché:**
+8.  **Limpiar la caché:**
 
     Limpia la caché de configuración y rutas para asegurar que los cambios se apliquen correctamente:
 

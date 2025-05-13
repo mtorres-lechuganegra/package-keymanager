@@ -97,7 +97,7 @@ class ApiKeyService
         }
     
         // Si existe, proceder a revocarla
-        $apiKey->delete();  // O cualquier otra lógica para marcar como revocada
+        $apiKey->delete();
     
         return true;
     }
