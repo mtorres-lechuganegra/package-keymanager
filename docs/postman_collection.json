@@ -12,6 +12,16 @@
 				{
 					"name": "Generate",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -27,7 +37,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"user_id\": 1,\r\n    \"name\": \"Site Name\",\r\n    \"referer_url\": \"http://tudominio.com\",\r\n    \"expires_at\": \"2025-05-01\",\r\n    \"status\": \"active\"\r\n}",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"name\": \"Site Name\",\r\n    \"referer_url\": \"\",\r\n    \"expires_at\": \"2025-05-01\",\r\n    \"status\": \"active\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -50,6 +60,16 @@
 				{
 					"name": "Validate",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -93,6 +113,16 @@
 				{
 					"name": "Revoke",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -116,14 +146,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}api/key/revoke/{key}",
+							"raw": "{{url}}api/key/revoke/WhTYt1sJoiRWF7psjrc58HqLm7L97EOc",
 							"host": [
 								"{{url}}api"
 							],
 							"path": [
 								"key",
 								"revoke",
-								"{key}"
+								"WhTYt1sJoiRWF7psjrc58HqLm7L97EOc"
 							]
 						}
 					},
